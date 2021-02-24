@@ -1,0 +1,53 @@
+let username = document.getElementById("username");
+let password = document.getElementById("password");
+let form = document.getElementById("form");
+let errorBlock = document.getElementById("errorBlock");
+let errorBlock2 = document.getElementById("errorBlock2");
+form.addEventListener("submit", e => {
+	let errorMessages = [];
+
+	e.preventDefault();
+	var name = username.value;
+	var pass = password.value;
+
+	if (name === "" || name === null) {
+		errorMessages.push("Username required");
+	}
+	if (pass === "" || pass === null) {
+		errorMessages.push("Password required");
+	} else if (pass.length < 6) {
+		errorMessages.push("Password should be minimum 6 characters");
+	}
+	if (errorMessages.length > 0)
+		errorBlock.innerHTML = errorMessages.join("<br>");
+	else {
+		alert(`Username - ${name}
+        Password: ${pass}`);
+		username.value = "";
+		password.value = "";
+	}
+});
+
+<section class="col-md-4 mx-auto card my-2">
+    <div class="card-body">
+        <h1 class="text-uppercase text-primary font-weight-bold">Login</h1>
+        <p id="errorBlock" class="text-danger"></p>
+        <form id="form" novalidate>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" id="username" name="username" placeholder="username" required />
+            </div>
+            
+            <div class="form-group">
+                <label for="username">Password</label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="password" required />
+            </div>
+            
+            <div class="form-group">
+                <button class="btn btn-primary btn-danger btn-block" >
+                    Login</button>
+            </div>
+        </form>
+
+    </div>
+</section>

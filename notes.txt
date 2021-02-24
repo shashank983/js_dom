@@ -1,0 +1,61 @@
+getElementById() returns sna element object reperesenting the element whose id property matches the specified string.
+
+getElementsByClassName() returns a collection of all elements in the document with specified
+class name,as an HTMLCollection object
+HTMLCollection object reperesents a collection of nodes.
+the nodes can be accessed by index numbers. the index starts from 0.
+
+The DOMTokenList interface represents a set of space-separated tokens. 
+Such a set is returned by Element.classList, HTMLLinkElement.relList, 
+`HTMLAnchorElement.relList, HTMLAreaElement.relList, HTMLIframeElement.sandbox, or HTMLOutputElement.htmlFor. 
+It is indexed beginning with 0 as with JavaScript Array objects. 
+DOMTokenList is always case-sensitive.\
+
+difference between classname and classlist:
+Using "classList", you can add or remove a class without affecting any others the element may have. 
+But if you assign "className", it will wipe out any existing classes while adding the new one
+
+The for...of statement creates a loop iterating over iterable objects, including: 
+built-in String, Array, array-like objects (e.g., arguments or NodeList), TypedArray, Map, Set, and user-defined iterables.
+It invokes a custom iteration hook with statements to be executed for the value of each distinct property of the object.
+
+
+syntax:
+    const array1 = ['a','b','c']
+    for(const element of array1){
+        log(element);
+    }
+
+Iterating over the arguments object
+You can iterate over the arguments object to examine all of the parameters passed into a JavaScript function:
+
+Iterating over a DOM collection
+Iterating over DOM collections like NodeList: 
+the following example adds a read class to paragraphs that are direct descendants of an article:
+
+querySelectorAll() uses selectors like id,class,element
+Query selector supports foreach loop
+NodeList is not an array but it supports forEach method
+
+
+--------------------------------22-2-2021-------------------------------------
+preventDefault:
+The preventDefault() method cancels the event if it is cancelable, meaning that the default action that belongs to the event will not occur.
+
+html side built-in validators: required,minlength,maxlength,pattern
+
+novalidate attribute: This Boolean attribute indicates that the form is not to be validated when submitted. 
+If this attribute is not specified (and therefore the form is validated), 
+this default setting can be overridden by a formnovalidate attribute on a <button> or <input> element belonging to the form.
+---------------------------------------------------------------------------------------------------------------------------------------
+------- new datatype: bigint                                                                                                   --------
+------- BigInt is a built-in object that provides a way to represent whole numbers larger than 253 - 1,                        --------
+------- which is the largest number JavaScript can reliably represent with the Number primitive and represented by the Number. --------
+------- BigInt can be used for arbitrarily large integers.                                                                     --------
+---------------------------------------------------------------------------------------------------------------------------------------           
+
+
+Bubbling:
+    When an event happens on an element, it first runs the handlers on it, then on its parent, 
+    then all the way up on other ancestors.
+    
